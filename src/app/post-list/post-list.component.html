@@ -1,0 +1,16 @@
+<h3>Cписок статей</h3>
+<mat-card *ngFor="let post of posts">
+  <mat-card-header>
+    <mat-card-title>
+      <h4 [routerLink]="['/blog', post.id]">{{post.title}}</h4>
+    </mat-card-title>
+    <mat-card-subtitle>by {{post.author}}</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <p>{{post.text}}</p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button color="primary" [routerLink]="['/blog/update', post.id]">Редактировать</button>
+    <button mat-raised-button color="warn" [routerLink]="['/blog/delete', post.id]">Удалить</button>
+  </mat-card-actions>
+</mat-card>

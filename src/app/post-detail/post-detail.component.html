@@ -1,0 +1,8 @@
+<mat-card *ngIf="post">
+  <mat-card-title>{{post.title}}</mat-card-title>
+  <mat-card-subtitle>{{post.author}}</mat-card-subtitle>
+  <mat-card-content>{{post.text}}</mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button color="primary" [routerLink]="['/']">Назад</button>
+  </mat-card-actions>
+</mat-card>

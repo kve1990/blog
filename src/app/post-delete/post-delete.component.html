@@ -1,0 +1,8 @@
+<mat-card *ngIf="post">
+  <mat-card-title>{{post.title}}</mat-card-title>
+  <mat-card-content>Удалить статью?</mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button color="primary" [routerLink]="['/']">Нет</button>
+    <button mat-raised-button color="warn" (click)="delete(post)">Да</button>
+  </mat-card-actions>
+</mat-card>

@@ -1,0 +1,22 @@
+<mat-card *ngIf="post">
+  <mat-card-title *ngIf="!isNew">{{post.title}}</mat-card-title>
+  <mat-card-content>
+      <div class="container">
+        <mat-form-field>
+          <input matInput placeholder="Заголовок" [(ngModel)]="post.title">
+        </mat-form-field>
+
+        <mat-form-field>
+          <input matInput placeholder="Автор" [(ngModel)]="post.author">
+        </mat-form-field>
+      
+        <mat-form-field>
+          <textarea matInput placeholder="Текст" [(ngModel)]="post.text"></textarea>
+        </mat-form-field>
+      </div>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button color="primary" [routerLink]="['/']">Назад</button>
+    <button mat-raised-button color="warn" (click)='edit(post)'>{{textButton}}</button>
+  </mat-card-actions>
+</mat-card>
